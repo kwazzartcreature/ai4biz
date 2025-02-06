@@ -1,0 +1,17 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "$API_PORT:$API_PORT"
+    environment:
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_ALGORITHM=${JWT_ALGORITHM}
+      - JWT_EXPIRE_MINUTES=${JWT_EXPIRE_MINUTES}
+      - API_PORT=${API_PORT}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+      - PORT=${PORT}
+      - REDIS_URL=${REDIS_URL}
+      - MAX_HISTORY_LENGTH=${MAX_HISTORY_LENGTH}

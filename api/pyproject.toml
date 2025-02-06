@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "inchatai-api"
+version = "0.1.0"
+description = ""
+authors = ["kwazzartcreature <kwazzartcreature@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-dotenv = "^1.0.1"
+pyjwt = "^2.10.1"
+fastapi = {extras = ["all"], version = "^0.115.7"}
+openai = "^1.60.1"
+pydantic-ai = "^0.0.20"
+crawl4ai = "^0.4.247"
+asyncpg = "^0.30.0"
+aiobotocore = "^2.19.0"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.37"}
+pydantic = "^2.10.6"
+bcrypt = "^4.2.1"
+alembic = "^1.14.1"
+pytest-asyncio = "^0.25.3"
+tiktoken = "^0.8.0"
+redis = "^5.2.1"
+arq = "^0.26.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "session"
